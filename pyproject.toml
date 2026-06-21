@@ -1,3 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "one-composio-mcp"
+version = "0.1.0"
+description = "Unified Composio MCP bridge via Tool Router"
+requires-python = ">=3.10"
+dependencies = [
+  "composio>=0.10.5",
+  "typer>=0.12",
+  "pydantic>=2.0",
+  "pydantic-settings>=2.0",
+  "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-cov>=5.0", "pytest-mock>=3.14", "black", "isort", "flake8"]
+
+[project.scripts]
+one-composio-mcp = "one_composio_mcp.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/one_composio_mcp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "--basetemp=.pytest_basetemp"
+
+[tool.coverage.run]
+source = ["one_composio_mcp"]
+
 [tool.black]
 line-length = 88
 target-version = ['py38', 'py39', 'py310', 'py311', 'py312']
@@ -15,6 +49,5 @@ extend-exclude = '''
 [tool.isort]
 profile = "black"
 line_length = 88
-known_first_party = ["dobeutech"]
+known_first_party = ["one_composio_mcp"]
 skip = [".git", ".mypy_cache", ".venv", "venv", "__pycache__"]
-# Consistent import sorting with black

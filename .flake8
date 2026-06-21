@@ -1,6 +1,8 @@
 [flake8]
 max-line-length = 88
 extend-ignore = E203, E501, W503
+exclude = .git,__pycache__,.venv,venv,.pytest_cache,.mypy_cache
+# Scan src/ and tests/ (added for one-composio-mcp package)
 # E203: whitespace before ':' (conflicts with black)
 # E501: line too long (black handles)
 # W503: line break before binary operator (conflicts with black)

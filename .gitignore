@@ -1,0 +1,15 @@
+# .gitignore
+config.yaml
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+.pytest_basetemp/
+.mypy_cache/
+.coverage
+htmlcov/
+*.egg-info/
+.one-composio-mcp/
