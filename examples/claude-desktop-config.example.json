@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "composio-unified": {
+      "url": "https://backend.composio.dev/mcp/sess_EXAMPLE",
+      "headers": {
+        "x-api-key": "ak_EXPORT_FROM_SHELL_ONLY"
+      }
+    }
+  }
+}
