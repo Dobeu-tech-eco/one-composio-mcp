@@ -7,6 +7,7 @@ config.yaml
 venv/
 __pycache__/
 .pytest_cache/
+.pytest-tmp/
 .pytest_basetemp/
 .mypy_cache/
 .coverage
