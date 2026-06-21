@@ -1,0 +1,24 @@
+# config.example.yaml — copy to config.yaml (gitignored)
+composio:
+  api_key_env: COMPOSIO_API_KEY          # never store ak_* here
+  user_id_env: COMPOSIO_USER_ID          # fallback: machine hostname
+  default_profile: phase0_smoke
+
+  connected_accounts:
+    gdrive_work: ca_REPLACE_ME
+    outlook_work: ca_REPLACE_ME
+
+profiles:
+  phase0_smoke:
+    toolkits: [composio_search]
+    tags: [readOnlyHint]
+  phase1_cloud:
+    toolkits: [googledrive, outlook]
+    connected_accounts:
+      googledrive: gdrive_work
+      outlook: outlook_work
+  phase2_onedrive:
+    toolkits: [googledrive, outlook, one_drive]
+  phase3_gmail:
+    toolkits: [googledrive, outlook, one_drive, gmail]
+    # enable only after mailbox cost review
