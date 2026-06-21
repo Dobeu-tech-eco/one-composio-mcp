@@ -1,0 +1,28 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "one-composio-mcp",
+  "description": "Unified Composio MCP bridge via Tool Router sessions. Creates scoped sessions, manages connections, and emits HTTP MCP config for Cursor and other agents.",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Windows, macOS, Linux",
+  "softwareVersion": "0.1.0",
+  "author": {
+    "@type": "Organization",
+    "name": "Dobeu Tech Solutions"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "featureList": [
+    "Composio Tool Router session creation with phased toolkit profiles",
+    "Environment-only API key loading (never stored in config files)",
+    "Cursor-compatible HTTP MCP JSON emission",
+    "Connection authorization and toolkit status helpers",
+    "Stable user_id for shared OAuth across sessions"
+  ],
+  "installUrl": "https://github.com/dobeutech/composio-one-mcp-bridge",
+  "softwareRequirements": "Python 3.10+, COMPOSIO_API_KEY environment variable",
+  "releaseNotes": "https://github.com/dobeutech/composio-one-mcp-bridge/blob/main/one-composio-mcp/CHANGELOG.md"
+}
